@@ -39,6 +39,14 @@ Because programs running on your cluster aren’t guaranteed to run on a specifi
 
 ### What is a pod?
 
-Kubernetes doesn’t run containers directly; instead it wraps one or more containers into a higher-level structure called a pod
-Any containers in the same pod will share the same resources and local network. Containers can easily communicate with other containers in the same pod as though they were on the same machine while maintaining a degree of isolation from others. 
+Kubernetes does not run containers directly; instead it wraps one or more containers into a higher-level structure called a pod
+Any containers in the same pod will share the same resources and local network. Containers can easily communicate with other containers in the same pod as though they were on the same machine while maintaining a degree of isolation from others.
 
+## What is a Deployment?
+
+Deployments represent a set of multiple, identical Pods with no unique identities. A Deployment runs multiple replicas of your application and automatically replaces any instances that fail or become unresponsive. In this way, Deployments help ensure that one or more instances of your application are available to serve user requests. Deployments are managed by the Kubernetes Deployment controller.
+
+## Tools
+
+- kubernetes-cli (kubectl) 
+- minikube (Minikube is a tool that makes it easy to run Kubernetes locally)
