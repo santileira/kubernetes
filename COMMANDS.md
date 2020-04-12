@@ -57,3 +57,15 @@ View the container logs
 List the environment variables.
 
 ## kubectl exec -ti $POD_NAME bash
+
+## kubectl get pods pingpong-c849c8bbc-vrd2s -o yaml | less
+
+## kubectl get pods -o wide 
+
+## kubectl logs pingpong-c849c8bbc-vrd2s --follow
+
+## kubectl get replicasets.apps
+
+## kubectl delete pods pingpong-c849c8bbc-vrd2s
+
+## kubectl scale deploy/pingpong --replicas=8
