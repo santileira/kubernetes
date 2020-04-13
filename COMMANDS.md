@@ -69,3 +69,5 @@ List the environment variables.
 ## kubectl delete pods pingpong-c849c8bbc-vrd2s
 
 ## kubectl scale deploy/pingpong --replicas=8
+
+## kubectl -n kube-system get pods
