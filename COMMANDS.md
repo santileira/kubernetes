@@ -4,70 +4,70 @@
 
 Minikube started a virtual machine for you, and a Kubernetes cluster is now running in that VM.
 
-## kubectl cluster-info
+## Pods
 
-View the cluster details.
+### kubectl get pods pingpong-c849c8bbc-vrd2s -o yaml | less
 
-## kubectl get nodes
+### kubectl get pods -o wide
 
-This command shows all nodes that can be used to host our applications.
+### kubectl get pods -w (watch)
 
-## deploy app on Kubernetes
+### kubectl run --restart=Never sleep --image=busybox sleep 20;
 
-`kubectl run kubernetes-bootcamp --image=<url-image> --port=<port>`
+### kubectl run --dry-run -o yaml pingpong --image=alpine ping 1.1.1.1
 
-ex: `kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080`
+### kubectl run --dry-run -o yaml pingpong --image=alpine ping 1.1.1.1 | kubectl apply -f -
 
-## kubectl get deployments
+### kubectl delete pod sleep
 
-List our deployments
+### kubectl logs pingpong-c849c8bbc-vrd2s --follow
 
-## run the proxy
+## Deployments
 
-The kubectl command can create a proxy that will forward communications into the cluster-wide, private network
+### kubectl get deploy
 
-`kubectl proxy`
+### kubectl create deployment nginx --image=nginx
 
-## kubectl get pods
+### kubectl get deploy/nginx
 
-`curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/`
+### kubectl get deploy/nginx -o yaml
 
-## kubectl get
+### kubectl scale deploy/nginx --replicas=8 
 
-List resources
+### kubectl delete deploy pods
 
-## kubectl describe
+## Services
 
-Show detailed information about a resource
+### ClusterIP 
 
-## kubectl logs
+Only reachable form within the cluster
 
-Print the logs from a container in a pod
+### NodePort
 
-## kubectl exec
+Exposes the Service on each Node`s IP as static port.
 
-Execute a command on a container in a pod
+#### kubectl expose deploy/nginx --type=NodePort --port=80
 
-## kubectl logs $POD_NAME
+#### kubectl get service/nginx -o yaml | less
 
-View the container logs
+#### kubectl get nodes -o wide
 
-## kubectl exec $POD_NAME env
+### LoadBalancer
 
-List the environment variables.
+Exposes the service externally using a cloud provider's load balancer.
 
-## kubectl exec -ti $POD_NAME bash
+#### kubectl expose deploy/nginx --type=LoadBalancer --port=80
 
-## kubectl get pods pingpong-c849c8bbc-vrd2s -o yaml | less
+### ExternalName
 
-## kubectl get pods -o wide 
+Maps the service to the contents of the externalName field but returning a CNAME record with its value.
 
-## kubectl logs pingpong-c849c8bbc-vrd2s --follow
+## Labels
 
-## kubectl get replicasets.apps
+### kubectl get pods --selector=app=webui
 
-## kubectl delete pods pingpong-c849c8bbc-vrd2s
+### kubectl label pod rng-6979b4858b-p5hhc app-
 
-## kubectl scale deploy/pingpong --replicas=8
+## Endpoints
 
-## kubectl -n kube-system get pods
+### kubectl get endpoints
