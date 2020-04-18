@@ -44,7 +44,7 @@ Only reachable form within the cluster
 
 ### NodePort
 
-Exposes the Service on each Node`s IP as static port.
+Exposes the Service on each Node`s IP as static port. qqqYou have to create a firewall rule to allow the traffic.
 
 #### kubectl expose deploy/nginx --type=NodePort --port=80
 
@@ -62,12 +62,22 @@ Exposes the service externally using a cloud provider's load balancer.
 
 Maps the service to the contents of the externalName field but returning a CNAME record with its value.
 
+## DaemonSet
+
+DaemonSets are used when you want to make sure that a particular pod runs on all nodes that belong to a cluster.
+
+`kubectl apply -f rng.yml`
+
+`kubectl apply -f rng.yml -validate=false`
+
+`kubectl get daemonsets.apps`
+
 ## Labels
 
-### kubectl get pods --selector=app=webui
+`kubectl get pods --selector=app=webui`
 
-### kubectl label pod rng-6979b4858b-p5hhc app-
+`kubectl label pod rng-wed app-`
 
 ## Endpoints
 
-### kubectl get endpoints
+`kubectl get endpoints`

@@ -1,35 +1,80 @@
 # course
 
-### kubectl create deployment redis --image=redis
+## Google Cloud
 
-### kubectl create deployment hasher --image=dockercoins/hasher:v0.1
+`gcloud config set project kubernetes-wildlife`
 
-### kubectl create deployment rng --image=dockercoins/rng:v0.1
+`gcloud config set compute/zone us-west1-a`
 
-### kubectl create deployment webui --image=dockercoins/webui:v0.1
+`gcloud container clusters create wildlife`
 
-### kubectl create deployment worker --image=dockercoins/worker:v0.1
+```
+NAME      LOCATION    MASTER_VERSION  MASTER_IP       MACHINE_TYPE   NODE_VERSION    NUM_NODES  STATUS
+wildlife  us-west1-a  1.14.10-gke.27  35.199.164.233  n1-standard-1  1.14.10-gke.27  3          RUNNING
+```
 
-### kubectl logs deploy/worker
+`gcloud container clusters delete wildlife`
 
-### kubectl exec worker-598788db65-2wvp2 -it /bin/sh
+`gcloud container clusters get-credentials wildlife`
 
-### kubectl expose deployment redis --port 3679 (ClusterIP for default)
+`gcloud compute firewall-rules create nginx-node-port --allow tcp:<nodePort>`
 
-### kubectl delete pods worker-598788db65-2wvp2
+`gcloud compute firewall-rules delete nginx-node-port`
 
-### kubectl expose deployment rng --port 80
+## Application 
 
-### kubectl expose deployment hasher --port 80
+1- Only one rng per node.
 
-### kubectl expose deploy/webui --type=NodePort --port=80
+### Start
 
-### kubectl get svc
+`kubectl create deployment redis --image=redis`
 
-### kubectl scale deploy/worker --replicas=3
+`kubectl create deployment hasher --image=dockercoins/hasher:v0.1`
 
-### kubectl get deploy/rng -o yaml --export >rng.yaml
+`kubectl create deployment rng --image=dockercoins/rng:v0.1`
 
-### kubectl apply -f rng.yaml
+`kubectl create deployment webui --image=dockercoins/webui:v0.1`
 
-### kubectl get daemonsets.apps
+`kubectl create deployment worker --image=dockercoins/worker:v0.1`
+
+`kubectl expose deploy/redis --port=6379 (ClusterIP for default)`
+
+`kubectl expose deploy/rng --port=80`
+
+`kubectl expose deploy/hasher --port=80`
+
+`kubectl expose deploy/webui --type=NodePort --port=80`
+
+`kubectl scale deploy/worker --replicas=3`
+
+### Clean
+
+`kubectl delete deploy/redis`
+
+`kubectl delete deploy/hasher`
+
+`kubectl delete deploy/rng`
+
+`kubectl delete deploy/webui`
+
+`kubectl delete deploy/worker`
+
+### Commands
+
+`kubectl get deploy/rng`
+
+`kubectl get deploy/rng -o yaml --export > rng.yml`
+
+`kubectl apply -f rng.yaml`
+
+`kubectl get daemonsets.apps`
+
+`kubectl get services`
+
+`kubectl logs deploy/worker`
+
+`kubectl exec worker-598788db65-2wvp2 -it /bin/sh`
+
+
+
+
