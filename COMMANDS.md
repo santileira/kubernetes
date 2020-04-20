@@ -81,3 +81,34 @@ DaemonSets are used when you want to make sure that a particular pod runs on all
 ## Endpoints
 
 `kubectl get endpoints`
+
+## Rolling updates
+
+`kubectl set image deploy worker worker=dockercoins/worker:v0.2`
+
+`kubectl rollout undo deploy worker`
+
+`kubectl rollout status deploy worker`
+
+## Liveness
+
+The kubelet uses liveness probes to know when to restart a container
+
+Commands:
+
+1- Exec
+2- httpGet
+3- tcpSocket
+
+## Readiness
+
+The kubelet uses readiness probes to know when a container is ready to start accepting traffic
+
+Commands:
+
+1- httpGet
+2- tcpSocket
+
+## Startup
+
+The kubelet uses startup probes to know when a container application has started.
