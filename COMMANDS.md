@@ -82,6 +82,16 @@ DaemonSets are used when you want to make sure that a particular pod runs on all
 
 `kubectl get endpoints`
 
+## ConfigMap
+
+`kubectl create configmap haproxy -from-file=haproxy.cfg`
+
+`kubectl get configmaps`
+
+`kubectl get configmaps haproxy -o yaml | less`
+
+`kubectl apply -f ./haproxy.yaml  `
+
 ## Rolling updates
 
 `kubectl set image deploy worker worker=dockercoins/worker:v0.2`
@@ -112,3 +122,31 @@ Commands:
 ## Startup
 
 The kubelet uses startup probes to know when a container application has started.
+
+# helm
+
+## Repositories
+
+1- Chart museum
+
+2- S3
+
+3- Git
+
+## Commands
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com/`
+
+`helm search repo stable/prometheus`
+
+`helm inspect chart stable/prometheus`
+
+`helm install --set server.service.type=NodePort --set server.persistentVolume.enabled=false prometheus stable/prometheus`
+
+`helm status prometheus`
+
+`helm list`
+
+`helm uninstall prometheus`
+
+`helm create dockercoins`

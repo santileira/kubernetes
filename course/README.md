@@ -75,6 +75,31 @@ wildlife  us-west1-a  1.14.10-gke.27  35.199.164.233  n1-standard-1  1.14.10-gke
 
 `kubectl exec worker-598788db65-2wvp2 -it /bin/sh`
 
+### helm
+
+`helm create dockercoins`
+
+```
+while read kind name; do
+kubectl get -o yaml --export $kind $name > templates/$name-$kind.yaml
+done <<EOF
+deployment worker
+deployment hasher
+daemonset rng
+deployment webui
+deployment redis
+service hasher
+service rng
+service webui
+service redis
+EOF
+```
+
+`helm install -n dockercoins dockercoins ./`
+ 
+`helm upgrade -n dockercoins -f values.yaml dockercoins ./`
+
+
 
 
 
