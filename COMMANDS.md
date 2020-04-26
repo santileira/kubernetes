@@ -1,8 +1,10 @@
 # minikube
-
+ 
 ## minikube start
 
 Minikube started a virtual machine for you, and a Kubernetes cluster is now running in that VM.
+
+# kubernetes
 
 ## Pods
 
@@ -82,15 +84,55 @@ DaemonSets are used when you want to make sure that a particular pod runs on all
 
 `kubectl get endpoints`
 
-## ConfigMap
+## Volumes
 
-`kubectl create configmap haproxy -from-file=haproxy.cfg`
+`kubectl port-forward nginx-with-volume 8080:80`
 
-`kubectl get configmaps`
+## Namespaces
 
-`kubectl get configmaps haproxy -o yaml | less`
+`kubectl get ns`
 
-`kubectl apply -f ./haproxy.yaml  `
+`kubectl get ns -o yaml`
+
+`kubectl config get-contexts`
+
+`kubectl config set-context --current --namespace=kube-node-lease`
+
+## Security
+
+1- TLS
+
+2- Token
+
+3- Username / password
+
+4- Proxy
+
+RBAC = Role Base Access Control
+
+`kubectl get serviceaccounts`
+
+`kubectl get serviceaccounts default -o json`
+
+`kubectl get secret default-token-z5fcr -o json`
+
+`kubectl create serviceaccount viewer`
+
+`kubectl get serviceaccount viewer -o yaml`
+
+`kubectl get clusterrole`
+
+`kubectl get clusterrole view -o yaml`
+
+`kubectl create rolebinding viewercanview --clusterrole=view --serviceaccount=default:viewer`
+
+`SECRET=$(kubectl get sa viewer -o json | jq -r '.secrets[0].name')`
+
+`TOKEN=$(kubectl get secret $SECRET -o json | jq -r '.data.token' | base64 --decode)`
+
+`kubectl auth can-i create pods`
+
+`kubectl auth can-i list pods --namespace default --as viewer`
 
 ## Rolling updates
 
@@ -123,6 +165,24 @@ Commands:
 
 The kubelet uses startup probes to know when a container application has started.
 
+## Configuration
+
+1- Arguments  
+
+2- Environment variables
+
+3- Configuration file
+
+`kubectl create configmap haproxy --from-file=haproxy.cfg`
+
+`kubectl get configmaps`
+
+`kubectl get configmap haproxy -o yaml`
+
+`kubectl edit configmap haproxy`
+
+`kubectl create configmap registry --from-literal=http.addr=0.0.0.80`
+
 # helm
 
 ## Repositories
@@ -150,3 +210,6 @@ The kubelet uses startup probes to know when a container application has started
 `helm uninstall prometheus`
 
 `helm create dockercoins`
+
+`kubectl create namespace dockercoins`
+

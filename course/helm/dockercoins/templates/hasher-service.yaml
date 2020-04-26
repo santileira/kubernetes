@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hasher
+  name: hasher
+  selfLink: /api/v1/namespaces/default/services/hasher
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: hasher
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
