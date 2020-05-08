@@ -1,59 +1,215 @@
 # minikube
-
+ 
 ## minikube start
 
 Minikube started a virtual machine for you, and a Kubernetes cluster is now running in that VM.
 
-## kubectl cluster-info
+# kubernetes
 
-View the cluster details.
+## Pods
 
-## kubectl get nodes
+### kubectl get pods pingpong-c849c8bbc-vrd2s -o yaml | less
 
-This command shows all nodes that can be used to host our applications.
+### kubectl get pods -o wide
 
-## deploy app on Kubernetes
+### kubectl get pods -w (watch)
 
-`kubectl run kubernetes-bootcamp --image=<url-image> --port=<port>`
+### kubectl run --restart=Never sleep --image=busybox sleep 20;
 
-ex: `kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080`
+### kubectl run --dry-run -o yaml pingpong --image=alpine ping 1.1.1.1
 
-## kubectl get deployments
+### kubectl run --dry-run -o yaml pingpong --image=alpine ping 1.1.1.1 | kubectl apply -f -
 
-List our deployments
+### kubectl delete pod sleep
 
-## run the proxy
+### kubectl logs pingpong-c849c8bbc-vrd2s --follow
 
-The kubectl command can create a proxy that will forward communications into the cluster-wide, private network
+## Deployments
 
-`kubectl proxy`
+### kubectl get deploy
 
-## kubectl get pods
+### kubectl create deployment nginx --image=nginx
 
-`curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/`
+### kubectl get deploy/nginx
 
-## kubectl get
+### kubectl get deploy/nginx -o yaml
 
-List resources
+### kubectl scale deploy/nginx --replicas=8 
 
-## kubectl describe
+### kubectl delete deploy pods
 
-Show detailed information about a resource
+## Services
 
-## kubectl logs
+### ClusterIP 
 
-Print the logs from a container in a pod
+Only reachable form within the cluster
 
-## kubectl exec
+### NodePort
 
-Execute a command on a container in a pod
+Exposes the Service on each Node`s IP as static port. qqqYou have to create a firewall rule to allow the traffic.
 
-## kubectl logs $POD_NAME
+#### kubectl expose deploy/nginx --type=NodePort --port=80
 
-View the container logs
+#### kubectl get service/nginx -o yaml | less
 
-## kubectl exec $POD_NAME env
+#### kubectl get nodes -o wide
 
-List the environment variables.
+### LoadBalancer
 
-## kubectl exec -ti $POD_NAME bash
+Exposes the service externally using a cloud provider's load balancer.
+
+#### kubectl expose deploy/nginx --type=LoadBalancer --port=80
+
+### ExternalName
+
+Maps the service to the contents of the externalName field but returning a CNAME record with its value.
+
+## DaemonSet
+
+DaemonSets are used when you want to make sure that a particular pod runs on all nodes that belong to a cluster.
+
+`kubectl apply -f rng.yml`
+
+`kubectl apply -f rng.yml -validate=false`
+
+`kubectl get daemonsets.apps`
+
+## Labels
+
+`kubectl get pods --selector=app=webui`
+
+`kubectl label pod rng-wed app-`
+
+## Endpoints
+
+`kubectl get endpoints`
+
+## Volumes
+
+`kubectl port-forward nginx-with-volume 8080:80`
+
+## Namespaces
+
+`kubectl get ns`
+
+`kubectl get ns -o yaml`
+
+`kubectl config get-contexts`
+
+`kubectl config set-context --current --namespace=kube-node-lease`
+
+## Security
+
+1- TLS
+
+2- Token
+
+3- Username / password
+
+4- Proxy
+
+RBAC = Role Base Access Control
+
+`kubectl get serviceaccounts`
+
+`kubectl get serviceaccounts default -o json`
+
+`kubectl get secret default-token-z5fcr -o json`
+
+`kubectl create serviceaccount viewer`
+
+`kubectl get serviceaccount viewer -o yaml`
+
+`kubectl get clusterrole`
+
+`kubectl get clusterrole view -o yaml`
+
+`kubectl create rolebinding viewercanview --clusterrole=view --serviceaccount=default:viewer`
+
+`SECRET=$(kubectl get sa viewer -o json | jq -r '.secrets[0].name')`
+
+`TOKEN=$(kubectl get secret $SECRET -o json | jq -r '.data.token' | base64 --decode)`
+
+`kubectl auth can-i create pods`
+
+`kubectl auth can-i list pods --namespace default --as viewer`
+
+## Rolling updates
+
+`kubectl set image deploy worker worker=dockercoins/worker:v0.2`
+
+`kubectl rollout undo deploy worker`
+
+`kubectl rollout status deploy worker`
+
+## Liveness
+
+The kubelet uses liveness probes to know when to restart a container
+
+Commands:
+
+1- Exec
+2- httpGet
+3- tcpSocket
+
+## Readiness
+
+The kubelet uses readiness probes to know when a container is ready to start accepting traffic
+
+Commands:
+
+1- httpGet
+2- tcpSocket
+
+## Startup
+
+The kubelet uses startup probes to know when a container application has started.
+
+## Configuration
+
+1- Arguments  
+
+2- Environment variables
+
+3- Configuration file
+
+`kubectl create configmap haproxy --from-file=haproxy.cfg`
+
+`kubectl get configmaps`
+
+`kubectl get configmap haproxy -o yaml`
+
+`kubectl edit configmap haproxy`
+
+`kubectl create configmap registry --from-literal=http.addr=0.0.0.80`
+
+# helm
+
+## Repositories
+
+1- Chart museum
+
+2- S3
+
+3- Git
+
+## Commands
+
+`helm repo add stable https://kubernetes-charts.storage.googleapis.com/`
+
+`helm search repo stable/prometheus`
+
+`helm inspect chart stable/prometheus`
+
+`helm install --set server.service.type=NodePort --set server.persistentVolume.enabled=false prometheus stable/prometheus`
+
+`helm status prometheus`
+
+`helm list`
+
+`helm uninstall prometheus`
+
+`helm create dockercoins`
+
+`kubectl create namespace dockercoins`
+

@@ -1,0 +1,183 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.024  000.024: --- VIM STARTING ---
+000.161  000.137: Allocated generic buffers
+004.595  004.434: locale set
+004.601  000.006: clipboard setup
+004.611  000.010: window checked
+012.854  008.243: inits 1
+013.058  000.204: parsing arguments
+013.061  000.003: expanding arguments
+016.243  003.182: shell init
+016.756  000.513: Termcap init
+016.776  000.020: inits 2
+016.936  000.160: init highlight
+024.806  007.179  007.179: sourcing /usr/local/share/vim/vim82/filetype.vim
+025.047  000.059  000.059: sourcing /usr/local/share/vim/vim82/ftplugin.vim
+025.247  000.022  000.022: sourcing /usr/local/share/vim/vim82/filetype.vim
+025.473  000.051  000.051: sourcing /usr/local/share/vim/vim82/indent.vim
+025.760  000.078  000.078: sourcing /usr/local/share/vim/vim82/delmenu.vim
+026.740  000.031  000.031: sourcing /usr/local/share/vim/vim82/lang/menu_en_gb.latin1.vim
+026.953  000.015  000.015: sourcing /usr/local/Cellar/vim/8.2.0600/share/vim/vim82/lang/menu_en_gb.latin1.vim
+026.962  000.124  000.109: sourcing /usr/local/share/vim/vim82/lang/menu_en_gb.utf-8.vim
+027.481  000.041  000.041: sourcing /usr/local/share/vim/vim82/autoload/paste.vim
+029.680  003.788  003.592: sourcing /usr/local/share/vim/vim82/menu.vim
+031.041  000.883  000.883: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+031.173  001.156  000.273: sourcing /usr/local/share/vim/vim82/syntax/synload.vim
+031.210  001.339  000.183: sourcing /usr/local/share/vim/vim82/syntax/syntax.vim
+031.740  000.206  000.206: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+032.192  000.177  000.177: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+032.558  000.171  000.171: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+032.779  001.439  000.885: sourcing /usr/local/share/vim/vim82/colors/desert.vim
+033.325  000.179  000.179: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+033.693  000.175  000.175: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+033.915  001.015  000.661: sourcing /usr/local/share/vim/vim82/colors/desert.vim
+034.368  016.892  001.922: sourcing /Users/sleira/.vim_runtime/vimrcs/basic.vim
+034.590  000.125  000.125: sourcing /Users/sleira/.vim_runtime/vimrcs/filetypes.vim
+035.246  000.380  000.380: sourcing /Users/sleira/.vim_runtime/autoload/pathogen.vim
+038.308  001.713  001.713: sourcing /usr/local/share/vim/vim82/ftoff.vim
+044.961  006.493  006.493: sourcing /usr/local/share/vim/vim82/filetype.vim
+052.043  001.367  001.367: sourcing /usr/local/share/vim/vim82/ftoff.vim
+059.247  000.048  000.048: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nginx.vim/ftdetect/nginx.vim
+059.451  000.040  000.040: sourcing /Users/sleira/.vim_runtime/sources_non_forked/rust.vim/ftdetect/rust.vim
+059.645  000.025  000.025: sourcing /Users/sleira/.vim_runtime/sources_non_forked/typescript-vim/ftdetect/typescript.vim
+059.841  000.039  000.039: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+060.040  000.048  000.048: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+060.142  000.023  000.023: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim
+060.336  000.016  000.016: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-fugitive/ftdetect/fugitive.vim
+060.521  000.015  000.015: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/flow.vim
+060.632  000.033  000.033: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/javascript.vim
+060.793  000.015  000.015: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+060.970  000.047  000.047: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+061.137  000.022  000.022: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-pug/ftdetect/pug.vim
+061.428  000.103  000.103: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby.vim
+061.693  000.139  000.139: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby_extra.vim
+061.991  009.429  008.816: sourcing /usr/local/share/vim/vim82/filetype.vim
+066.484  001.898  001.898: sourcing /usr/local/share/vim/vim82/ftoff.vim
+072.680  000.046  000.046: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nginx.vim/ftdetect/nginx.vim
+072.908  000.047  000.047: sourcing /Users/sleira/.vim_runtime/sources_non_forked/rust.vim/ftdetect/rust.vim
+073.099  000.023  000.023: sourcing /Users/sleira/.vim_runtime/sources_non_forked/typescript-vim/ftdetect/typescript.vim
+073.324  000.048  000.048: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-bundle-mako/ftdetect/mako.vim
+073.676  000.172  000.172: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/coffee.vim
+073.803  000.024  000.024: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim
+073.995  000.014  000.014: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-fugitive/ftdetect/fugitive.vim
+074.183  000.015  000.015: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/flow.vim
+074.312  000.037  000.037: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-javascript/ftdetect/javascript.vim
+074.539  000.040  000.040: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-less/ftdetect/less.vim
+074.751  000.048  000.048: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-markdown/ftdetect/markdown.vim
+074.935  000.023  000.023: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-pug/ftdetect/pug.vim
+075.206  000.093  000.093: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby.vim
+075.424  000.126  000.126: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-ruby/ftdetect/ruby_extra.vim
+075.708  008.737  007.981: sourcing /usr/local/share/vim/vim82/filetype.vim
+119.995  085.315  055.298: sourcing /Users/sleira/.vim_runtime/vimrcs/plugins_config.vim
+121.431  000.155  000.155: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+122.046  000.144  000.144: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+122.270  001.700  001.401: sourcing /usr/local/share/vim/vim82/colors/desert.vim
+123.357  000.165  000.165: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+123.947  000.144  000.144: sourcing /usr/local/share/vim/vim82/syntax/syncolor.vim
+124.533  001.913  001.604: sourcing /Users/sleira/.vim_runtime/sources_forked/peaksea/colors/peaksea.vim
+124.821  004.709  001.096: sourcing /Users/sleira/.vim_runtime/vimrcs/extended.vim
+124.919  000.015  000.015: sourcing /Users/sleira/.vim_runtime/my_configs.vim
+124.930  107.594  000.538: sourcing $HOME/.vimrc
+124.935  000.405: sourcing vimrc file(s)
+125.248  000.093  000.093: sourcing /Users/sleira/.vim_runtime/sources_non_forked/ack.vim/plugin/ack.vim
+126.218  000.111  000.111: sourcing /Users/sleira/.vim_runtime/sources_non_forked/ale/autoload/ale/events.vim
+126.494  001.075  000.964: sourcing /Users/sleira/.vim_runtime/sources_non_forked/ale/plugin/ale.vim
+127.046  000.397  000.397: sourcing /Users/sleira/.vim_runtime/sources_non_forked/auto-pairs/plugin/auto-pairs.vim
+128.243  001.026  001.026: sourcing /Users/sleira/.vim_runtime/sources_non_forked/bufexplorer/plugin/bufexplorer.vim
+128.897  000.232  000.232: sourcing /Users/sleira/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+129.061  000.655  000.423: sourcing /Users/sleira/.vim_runtime/sources_non_forked/ctrlp.vim/plugin/ctrlp.vim
+129.271  000.043  000.043: sourcing /Users/sleira/.vim_runtime/sources_non_forked/gist-vim/plugin/gist.vim
+129.449  000.024  000.024: sourcing /Users/sleira/.vim_runtime/sources_non_forked/goyo.vim/plugin/goyo.vim
+129.722  000.066  000.066: sourcing /Users/sleira/.vim_runtime/sources_non_forked/lightline-ale/plugin/lightline/ale.vim
+129.969  000.097  000.097: sourcing /Users/sleira/.vim_runtime/sources_non_forked/lightline.vim/plugin/lightline.vim
+131.549  001.418  001.418: sourcing /Users/sleira/.vim_runtime/sources_non_forked/mru.vim/plugin/mru.vim
+132.484  000.207  000.207: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree.vim
+133.710  000.435  000.435: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/path.vim
+133.983  000.115  000.115: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_controller.vim
+134.228  000.073  000.073: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/menu_item.vim
+134.524  000.108  000.108: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/key_map.vim
+134.863  000.191  000.191: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/bookmark.vim
+135.196  000.179  000.179: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_file_node.vim
+135.706  000.356  000.356: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/tree_dir_node.vim
+136.043  000.186  000.186: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/opener.vim
+136.445  000.237  000.237: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/creator.vim
+136.676  000.079  000.079: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/flag_set.vim
+137.020  000.134  000.134: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/nerdtree.vim
+137.496  000.293  000.293: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/ui.vim
+137.666  000.019  000.019: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/event.vim
+137.894  000.036  000.036: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/lib/nerdtree/notifier.vim
+138.579  000.466  000.466: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/autoload/nerdtree/ui_glue.vim
+141.104  000.081  000.081: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/exec_menuitem.vim
+141.811  000.605  000.605: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/fs_menu.vim
+141.941  000.045  000.045: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/nerdtree_plugin/vcs.vim
+142.598  010.852  007.007: sourcing /Users/sleira/.vim_runtime/sources_non_forked/nerdtree/plugin/NERD_tree.vim
+142.851  000.075  000.075: sourcing /Users/sleira/.vim_runtime/sources_non_forked/open_file_under_cursor.vim/plugin/open_file_under_cursor.vim
+143.115  000.083  000.083: sourcing /Users/sleira/.vim_runtime/sources_non_forked/rust.vim/plugin/cargo.vim
+143.267  000.036  000.036: sourcing /Users/sleira/.vim_runtime/sources_non_forked/rust.vim/plugin/rust.vim
+143.704  000.260  000.260: sourcing /Users/sleira/.vim_runtime/sources_non_forked/tabular/plugin/Tabular.vim
+143.962  000.099  000.099: sourcing /Users/sleira/.vim_runtime/sources_non_forked/tlib/plugin/02tlib.vim
+144.939  000.804  000.804: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-abolish/plugin/abolish.vim
+145.543  000.299  000.299: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-commentary/plugin/commentary.vim
+146.524  000.336  000.336: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-expand-region/autoload/expand_region.vim
+146.646  000.876  000.540: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-expand-region/plugin/expand_region.vim
+148.322  001.492  001.492: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-fugitive/plugin/fugitive.vim
+149.299  000.333  000.333: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-gitgutter/autoload/gitgutter/utility.vim
+150.276  000.393  000.393: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-gitgutter/autoload/gitgutter/highlight.vim
+151.240  002.739  002.013: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-gitgutter/plugin/gitgutter.vim
+151.700  000.249  000.249: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-indent-object/plugin/indent-object.vim
+152.136  000.217  000.217: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-lastplace/plugin/vim-lastplace.vim
+152.852  000.480  000.480: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-multiple-cursors/plugin/multiple_cursors.vim
+153.576  000.098  000.098: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-addon-mw-utils/autoload/funcref.vim
+154.030  000.878  000.780: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-snipmate/plugin/snipMate.vim
+154.377  000.091  000.091: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-snippets/plugin/vimsnippets.vim
+155.403  000.850  000.850: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-surround/plugin/surround.vim
+156.822  000.567  000.567: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-yankstack/autoload/yankstack.vim
+157.339  001.724  001.157: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-yankstack/plugin/yankstack.vim
+157.657  000.121  000.121: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-zenroom2/plugin/zenroom2.vim
+157.889  000.043  000.043: sourcing /Users/sleira/.vim_runtime/sources_forked/set_tabline/plugin/set_tabline.vim
+158.445  000.302  000.302: sourcing /Users/sleira/.vim_runtime/sources_forked/vim-peepopen/plugin/peepopen.vim
+159.090  000.063  000.063: sourcing /usr/local/share/vim/vim82/plugin/getscriptPlugin.vim
+159.584  000.378  000.378: sourcing /usr/local/share/vim/vim82/plugin/gzip.vim
+159.992  000.331  000.331: sourcing /usr/local/share/vim/vim82/plugin/logiPat.vim
+160.115  000.042  000.042: sourcing /usr/local/share/vim/vim82/plugin/manpager.vim
+160.444  000.254  000.254: sourcing /usr/local/share/vim/vim82/plugin/matchparen.vim
+161.109  000.583  000.583: sourcing /usr/local/share/vim/vim82/plugin/netrwPlugin.vim
+161.221  000.014  000.014: sourcing /usr/local/share/vim/vim82/plugin/rrhelper.vim
+161.339  000.028  000.028: sourcing /usr/local/share/vim/vim82/plugin/spellfile.vim
+161.623  000.155  000.155: sourcing /usr/local/share/vim/vim82/plugin/tarPlugin.vim
+161.821  000.102  000.102: sourcing /usr/local/share/vim/vim82/plugin/tohtml.vim
+162.096  000.171  000.171: sourcing /usr/local/share/vim/vim82/plugin/vimballPlugin.vim
+162.423  000.225  000.225: sourcing /usr/local/share/vim/vim82/plugin/zipPlugin.vim
+162.451  007.706: loading plugins
+162.542  000.091: loading packages
+163.028  000.260  000.260: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-snipmate/after/plugin/snipMate.vim
+164.190  000.473  000.473: sourcing /Users/sleira/.vim_runtime/sources_non_forked/tabular/autoload/tabular.vim
+165.704  002.429  001.956: sourcing /Users/sleira/.vim_runtime/sources_non_forked/tabular/after/plugin/TabularMaps.vim
+165.730  000.499: loading after plugins
+165.737  000.007: inits 3
+165.920  000.183: reading viminfo
+165.950  000.030: setting raw mode
+165.970  000.020: start termcap
+165.990  000.020: clearing screen
+168.844  000.053  000.053: sourcing /usr/local/share/vim/vim82/ftplugin/yaml.vim
+169.947  000.188  000.188: sourcing /usr/local/share/vim/vim82/indent/yaml.vim
+171.767  000.927  000.927: sourcing /usr/local/share/vim/vim82/syntax/yaml.vim
+182.872  000.304  000.304: sourcing /Users/sleira/.vim_runtime/sources_non_forked/ctrlp.vim/autoload/ctrlp/utils.vim
+190.196  022.734: opening buffers
+193.007  000.837  000.837: sourcing /Users/sleira/.vim_runtime/sources_non_forked/lightline.vim/autoload/lightline.vim
+193.961  000.078  000.078: sourcing /Users/sleira/.vim_runtime/sources_non_forked/lightline.vim/autoload/lightline/tab.vim
+194.941  000.242  000.242: sourcing /Users/sleira/.vim_runtime/sources_non_forked/lightline.vim/autoload/lightline/colorscheme.vim
+195.650  001.328  001.086: sourcing /Users/sleira/.vim_runtime/sources_non_forked/lightline.vim/autoload/lightline/colorscheme/wombat.vim
+200.057  000.314  000.314: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-gitgutter/autoload/gitgutter.vim
+200.726  007.973: BufEnter autocommands
+200.729  000.003: editing files in windows
+202.598  001.869: VimEnter autocommands
+202.602  000.004: before starting main loop
+212.967  005.452  005.452: sourcing /Users/sleira/.vim_runtime/sources_non_forked/vim-fugitive/autoload/fugitive.vim
+215.133  007.079: first screen update
+215.135  000.002: --- VIM STARTED ---
